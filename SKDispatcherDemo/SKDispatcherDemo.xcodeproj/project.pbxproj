@@ -13,9 +13,12 @@
 		2C74B0D8200DC841001A59B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C74B0D7200DC841001A59B2 /* Assets.xcassets */; };
 		2C74B0DB200DC841001A59B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C74B0D9200DC841001A59B2 /* LaunchScreen.storyboard */; };
 		2C74B0DE200DC841001A59B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74B0DD200DC841001A59B2 /* main.m */; };
+		E667D2F4F189C77E4BEA8D27 /* libPods-SKDispatcherDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E6C981073429B97EB80148 /* libPods-SKDispatcherDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11D4850A89B1C3C84ECBE277 /* Pods-SKDispatcherDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKDispatcherDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKDispatcherDemo/Pods-SKDispatcherDemo.release.xcconfig"; sourceTree = "<group>"; };
+		26E6C981073429B97EB80148 /* libPods-SKDispatcherDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKDispatcherDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C74B0CB200DC841001A59B2 /* SKDispatcherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKDispatcherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C74B0CE200DC841001A59B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C74B0CF200DC841001A59B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		2C74B0DA200DC841001A59B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C74B0DC200DC841001A59B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C74B0DD200DC841001A59B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC14557918B35E61F78848A0 /* Pods-SKDispatcherDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKDispatcherDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKDispatcherDemo/Pods-SKDispatcherDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E667D2F4F189C77E4BEA8D27 /* libPods-SKDispatcherDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				2C74B0CD200DC841001A59B2 /* SKDispatcherDemo */,
 				2C74B0CC200DC841001A59B2 /* Products */,
+				EF854E101BD614715ACC3702 /* Pods */,
+				8DDAED770E16FD43A2A86D5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = SKDispatcherDemo;
 			sourceTree = "<group>";
 		};
+		8DDAED770E16FD43A2A86D5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26E6C981073429B97EB80148 /* libPods-SKDispatcherDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF854E101BD614715ACC3702 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC14557918B35E61F78848A0 /* Pods-SKDispatcherDemo.debug.xcconfig */,
+				11D4850A89B1C3C84ECBE277 /* Pods-SKDispatcherDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C74B0E1200DC841001A59B2 /* Build configuration list for PBXNativeTarget "SKDispatcherDemo" */;
 			buildPhases = (
+				33192CDEBB6CA838566277B1 /* [CP] Check Pods Manifest.lock */,
 				2C74B0C7200DC841001A59B2 /* Sources */,
 				2C74B0C8200DC841001A59B2 /* Frameworks */,
 				2C74B0C9200DC841001A59B2 /* Resources */,
+				BEC6A1CAA4E01BECFBCC999D /* [CP] Embed Pods Frameworks */,
+				9F9B9DEF3528B11614D59C88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33192CDEBB6CA838566277B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SKDispatcherDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F9B9DEF3528B11614D59C88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKDispatcherDemo/Pods-SKDispatcherDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEC6A1CAA4E01BECFBCC999D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKDispatcherDemo/Pods-SKDispatcherDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C74B0C7200DC841001A59B2 /* Sources */ = {
@@ -276,6 +354,7 @@
 		};
 		2C74B0E2200DC841001A59B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC14557918B35E61F78848A0 /* Pods-SKDispatcherDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -292,6 +371,7 @@
 		};
 		2C74B0E3200DC841001A59B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D4850A89B1C3C84ECBE277 /* Pods-SKDispatcherDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

@@ -1,0 +1,12 @@
+PODS:
+  - SKDispatcher (0.0.1)
+
+DEPENDENCIES:
+  - SKDispatcher
+
+SPEC CHECKSUMS:
+  SKDispatcher: 11e6d2fc257e38d081034e0fa63c2b9f47da798e
+
+PODFILE CHECKSUM: 611e8c9cc4f4ce4d736c0c7acb10086b8c94eae6
+
+COCOAPODS: 1.3.1
