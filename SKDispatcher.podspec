@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.source_files = 'SKDispatcher/**/*.{h,m}'
   s.public_header_files = 'SKDispatcher/**/*.{h}'
   s.source       = { :git => "https://github.com/shaveKevin/SKDispatcher.git", :tag => "0.0.1" }
-  s.frameworks = 'Foundation,UIKit'
+  s.frameworks = 'UIKit'
 
 end
