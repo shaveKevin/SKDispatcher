@@ -13,6 +13,9 @@
 		2C74B0D8200DC841001A59B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C74B0D7200DC841001A59B2 /* Assets.xcassets */; };
 		2C74B0DB200DC841001A59B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C74B0D9200DC841001A59B2 /* LaunchScreen.storyboard */; };
 		2C74B0DE200DC841001A59B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74B0DD200DC841001A59B2 /* main.m */; };
+		2CD653F2200ED7EA00A563F7 /* TargetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD653F1200ED7EA00A563F7 /* TargetVC.m */; };
+		2CD653F7200ED88600A563F7 /* Target_pushTargetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD653F6200ED88600A563F7 /* Target_pushTargetVC.m */; };
+		2CD653FA200ED91900A563F7 /* SKDispatcher+PushTargetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD653F9200ED91900A563F7 /* SKDispatcher+PushTargetVC.m */; };
 		E667D2F4F189C77E4BEA8D27 /* libPods-SKDispatcherDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E6C981073429B97EB80148 /* libPods-SKDispatcherDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,12 @@
 		2C74B0DA200DC841001A59B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C74B0DC200DC841001A59B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C74B0DD200DC841001A59B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CD653F0200ED7EA00A563F7 /* TargetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetVC.h; sourceTree = "<group>"; };
+		2CD653F1200ED7EA00A563F7 /* TargetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetVC.m; sourceTree = "<group>"; };
+		2CD653F5200ED88600A563F7 /* Target_pushTargetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_pushTargetVC.h; sourceTree = "<group>"; };
+		2CD653F6200ED88600A563F7 /* Target_pushTargetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_pushTargetVC.m; sourceTree = "<group>"; };
+		2CD653F8200ED91900A563F7 /* SKDispatcher+PushTargetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKDispatcher+PushTargetVC.h"; sourceTree = "<group>"; };
+		2CD653F9200ED91900A563F7 /* SKDispatcher+PushTargetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKDispatcher+PushTargetVC.m"; sourceTree = "<group>"; };
 		BC14557918B35E61F78848A0 /* Pods-SKDispatcherDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKDispatcherDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKDispatcherDemo/Pods-SKDispatcherDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +74,9 @@
 		2C74B0CD200DC841001A59B2 /* SKDispatcherDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2CD653F4200ED85F00A563F7 /* SKDispatcherCategory */,
+				2CD653F3200ED85E00A563F7 /* SKDispatcherTarget */,
+				2CD653EF200ED7D900A563F7 /* TargetVC */,
 				2C74B0CE200DC841001A59B2 /* AppDelegate.h */,
 				2C74B0CF200DC841001A59B2 /* AppDelegate.m */,
 				2C74B0D1200DC841001A59B2 /* ViewController.h */,
@@ -76,6 +88,33 @@
 				2C74B0DD200DC841001A59B2 /* main.m */,
 			);
 			path = SKDispatcherDemo;
+			sourceTree = "<group>";
+		};
+		2CD653EF200ED7D900A563F7 /* TargetVC */ = {
+			isa = PBXGroup;
+			children = (
+				2CD653F0200ED7EA00A563F7 /* TargetVC.h */,
+				2CD653F1200ED7EA00A563F7 /* TargetVC.m */,
+			);
+			path = TargetVC;
+			sourceTree = "<group>";
+		};
+		2CD653F3200ED85E00A563F7 /* SKDispatcherTarget */ = {
+			isa = PBXGroup;
+			children = (
+				2CD653F5200ED88600A563F7 /* Target_pushTargetVC.h */,
+				2CD653F6200ED88600A563F7 /* Target_pushTargetVC.m */,
+			);
+			path = SKDispatcherTarget;
+			sourceTree = "<group>";
+		};
+		2CD653F4200ED85F00A563F7 /* SKDispatcherCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2CD653F8200ED91900A563F7 /* SKDispatcher+PushTargetVC.h */,
+				2CD653F9200ED91900A563F7 /* SKDispatcher+PushTargetVC.m */,
+			);
+			path = SKDispatcherCategory;
 			sourceTree = "<group>";
 		};
 		8DDAED770E16FD43A2A86D5F /* Frameworks */ = {
@@ -220,8 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD653FA200ED91900A563F7 /* SKDispatcher+PushTargetVC.m in Sources */,
 				2C74B0D3200DC841001A59B2 /* ViewController.m in Sources */,
+				2CD653F2200ED7EA00A563F7 /* TargetVC.m in Sources */,
 				2C74B0DE200DC841001A59B2 /* main.m in Sources */,
+				2CD653F7200ED88600A563F7 /* Target_pushTargetVC.m in Sources */,
 				2C74B0D0200DC841001A59B2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

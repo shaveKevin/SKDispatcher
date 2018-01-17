@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SKDispatcher+PushTargetVC.h"
 @interface ViewController ()
 
 @end
@@ -19,11 +19,14 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UIViewController *pushTargetVC = [[SKDispatcher sharedInstance]dispatcher_viewControllerPushTargetVC:@{@"pushValue":@"123456"}];
+    [self.navigationController pushViewController:pushTargetVC animated:YES];
+}
 
 @end
