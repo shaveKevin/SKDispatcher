@@ -7,8 +7,10 @@
 
 Target:工具类方法
 `Target_pushTargetVC`
+
 SKDispatcher类目：设置唯一标识找到类
 `SKDispatcher+PushTargetVC`
+
 使用：
 
 ```
@@ -17,6 +19,7 @@ SKDispatcher类目：设置唯一标识找到类
     [self.navigationController pushViewController:pushTargetVC animated:YES];
 }
 ```
+
 传值的时候默认参数为dict
 
 原理：
