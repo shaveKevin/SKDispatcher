@@ -49,7 +49,7 @@ SKDispatcher 属性说明：
  */
 @property (nonatomic, copy) NSString *actionMethodName;
 ```
-
-
+优点：耦合性低，可移植性强
+缺点：建立文件比较多，对文件命名规则格式有要求。
 
 
