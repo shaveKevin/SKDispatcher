@@ -56,4 +56,17 @@ SKDispatcher 属性说明：
 优点：耦合性低，可移植性强
 缺点：建立文件比较多，对文件命名规则格式有要求。
 
+安装
+==============
 
+### CocoaPods
+
+1. 在 Podfile 中添加 `pod 'SKDispatcher'`。
+2. 执行 `pod install` 或 `pod update`。
+3. 导入 \<SKDispatcher/SKDispatcher.h\>。
+
+### 手动安装
+
+1. 下载 SKDispatcher 文件夹内的所有内容。
+2. 将 SKDispatcher 内的源文件添加(拖放)到你的工程。
+3. 导入 `SKDispatcher.h`。
