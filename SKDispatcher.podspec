@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SKDispatcher"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "push dispatcher"
   s.description  = <<-DESC
                    跳转工具类
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'SKDispatcher/**/*.{h,m}'
   s.public_header_files = 'SKDispatcher/**/*.{h}'
-  s.source       = { :git => "https://github.com/shaveKevin/SKDispatcher.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/shaveKevin/SKDispatcher.git", :tag => "0.0.3" }
   s.frameworks = 'UIKit'
 
 end
