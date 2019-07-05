@@ -25,8 +25,16 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    // 1.跳转方式1
     UIViewController *pushTargetVC = [[SKDispatcher sharedInstance]dispatcher_viewControllerPushTargetVC:@{@"pushValue":@"123456"}];
     [self.navigationController pushViewController:pushTargetVC animated:YES];
+    return;
+    // 2.跳转方式2
+    UIViewController *pushTargetVC2 = [[SKDispatcher sharedInstance] dispatcher_viewControllerForTargetDict:@{@"Target":@"pushTargetVC",@"Action":@"nativePushTargetVC"} params:@{@"pushValue":@"666666"}];
+    [self.navigationController pushViewController:pushTargetVC2 animated:YES];
+
+    
 }
+
 
 @end

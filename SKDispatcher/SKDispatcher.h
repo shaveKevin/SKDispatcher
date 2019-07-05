@@ -65,5 +65,31 @@ extern NSString * const kSKDispatcherParams;
  @return called result
  */
 - (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params;
+/**
+ *  实例方法处理跳转逻辑
+ *
+ *  @param targetParame       target和Action名字
+ *  @param params 传值
+ *
+ *  @return 返回相应的VC
+ */
+
+- (UIViewController *)dispatcher_viewControllerForTargetDict:(NSDictionary *)targetParame
+                                                      params:(NSDictionary *)params;
+/**
+ *  类方法处理跳转功能
+ *
+ *  @param targetParame       target和Action名字
+ *  @param params 传值
+ *  @param pushNav 完成push操作的nav
+ *  @param animated animated
+ *
+ *  @返回相应的值
+ */
+
++ (void)dispatcher_viewControllerForTargetDict:(NSDictionary *)targetParame
+                                        params:(NSDictionary *)params
+                                       pushNav:(UINavigationController *)pushNav
+                                      animated:(BOOL)animated;
 
 @end

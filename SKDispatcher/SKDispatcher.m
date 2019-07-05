@@ -126,6 +126,52 @@ NSString * const kSKDispatcherParams = @"params";
     }
 }
 
+- (UIViewController *)dispatcher_viewControllerForTargetDict:(NSDictionary *)targetParame
+                                                      params:(NSDictionary *)params {
+    
+    NSAssert(targetParame[@"Target"] != nil && targetParame[@"Action"] != nil, @"字典中必须要有Target和Action字段");
+    
+    if (targetParame[@"Target"] && targetParame[@"Action"]) {
+        // 创建Controller
+        UIViewController * viewController = [self performTarget:targetParame[@"Target"]
+                                                         action:targetParame[@"Action"]
+                                                         params:params];
+        // 交付view controller 由外界选择是push 还是 present
+        if ([viewController isKindOfClass:[UIViewController class]]) {
+            return viewController;
+        } else {
+            return [[UIViewController alloc] init];
+        }
+    } else {
+        return [[UIViewController alloc] init];
+    }
+}
+
++ (void)dispatcher_viewControllerForTargetDict:(NSDictionary *)targetParame
+                                        params:(NSDictionary *)params
+                                       pushNav:(UINavigationController *)pushNav
+                                      animated:(BOOL)animated {
+    if (!pushNav) {
+        return;
+    }
+    
+    NSAssert(targetParame[@"Target"] != nil && targetParame[@"Action"] != nil, @"字典中必须要有Target和Action字段");
+    
+    if (targetParame[@"Target"] && targetParame[@"Action"]) {
+        // 创建Controller
+        UIViewController * viewController = [[SKDispatcher sharedInstance] performTarget:targetParame[@"Target"]
+                                                                                   action:targetParame[@"Action"]
+                                                                                   params:params];
+        // 交付view controller  由外界选择是push 还是 present
+        if ([viewController isKindOfClass:[UIViewController class]]) {
+            [pushNav pushViewController:viewController animated:animated];
+        } else {
+            [pushNav pushViewController:[[UIViewController alloc] init] animated:animated];
+        }
+    } else {
+        [pushNav pushViewController:[[UIViewController alloc] init] animated:animated];
+    }
+}
 #pragma mark utils
 // jsonStringToDict
 - (NSDictionary *)transmitJsonStingToDict:(NSString *)jsonDict {
