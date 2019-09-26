@@ -1,5 +1,6 @@
 # SKDispatcher
 
+## 具体可参考 ：https://github.com/casatwy/CTMediator
 
 用途：跳转工具类
 使用说明：
